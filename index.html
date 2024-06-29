@@ -245,22 +245,22 @@
             <p>
                 אנו מקפידים על שירות אישי, אמין ומקצועי, עם זמינות גבוהה ויחס חם לכל לקוח. תנו לנו להפוך את האירוע שלכם למשהו מיוחד באמת!
             </p>
-            <h3>מתנפחים פופולריים:</h3>
-            <div class="carousel">
+            <h3>מתנפח קטן:</h3>
+            <div class="carousel" id="smallInflatablesCarousel">
                 <img src="01.png" alt="מתנפח מגלשת מים" class="active">
                 <img src="02.png" alt="מתנפח מגלשת מים עם ילד">
                 <img src="03.png" alt="מתנפח תותח מים">
                 <img src="04.png" alt="מתנפח נוסף">
                 <iframe src="https://www.youtube.com/embed/VvzIxRZYc9o?si=ffC-WiGI69mXDW0f" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 'smallInflatablesCarousel')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'smallInflatablesCarousel')">&#10095;</a>
             </div>
             <div class="dots">
-                <span class="dot active-dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-                <span class="dot" onclick="currentSlide(4)"></span> 
-                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot active-dot" onclick="currentSlide(1, 'smallInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'smallInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'smallInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(4, 'smallInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(5, 'smallInflatablesCarousel')"></span> 
             </div>
             <div class="carousel-caption">
                 <h4>פרטי המתנפח:</h4>
@@ -275,7 +275,42 @@
                     תותח מים<br>
                     התקנה מהירה וקלה<br>
                     מפוח חשמלי עוצמתי המנפח את פארק המים בפחות מ-2 דקות<br>
-                    נבדק ואושר לשימוש על ידי מכון התקנים הישראלי
+                    נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
+                    מחיר: 450 ש"ח
+                </p>
+            </div>
+            <h3>מתנפח גדול:</h3>
+            <div class="carousel" id="largeInflatablesCarousel">
+                <img src="11.png" alt="מתנפח גדול 1" class="active">
+                <img src="22.png" alt="מתנפח גדול 2">
+                <img src="33.png" alt="מתנפח גדול 3">
+                <img src="44.png" alt="מתנפח גדול 4">
+                <iframe src="https://www.youtube.com/embed/GG1dpn4bDgs?si=osJ-9_m1kluD-mfN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <a class="prev" onclick="plusSlides(-1, 'largeInflatablesCarousel')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'largeInflatablesCarousel')">&#10095;</a>
+            </div>
+            <div class="dots">
+                <span class="dot active-dot" onclick="currentSlide(1, 'largeInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'largeInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'largeInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(4, 'largeInflatablesCarousel')"></span> 
+                <span class="dot" onclick="currentSlide(5, 'largeInflatablesCarousel')"></span> 
+            </div>
+            <div class="carousel-caption">
+                <h4>פרטי המתנפח:</h4>
+                <p>
+                    מידות: אורך 500 ס"מ, רוחב 400 ס"מ, גובה 300 ס"מ<br>
+                    משקל הפריט: 50 ק"ג<br>
+                    מתאים לגילאים 5-12<br>
+                    משקל מקסימלי למשתמש בודד: 60 ק"ג<br>
+                    כמות ילדים מקסימלית: 8<br>
+                    עשוי מחומר PVC מצופה פוליאסטר צבעוני ועמיד<br>
+                    כולל מיכל מים המתמלא ומתרוקן אקראית להפתעה ולשמירה על מגלשה חלקה<br>
+                    תותח מים<br>
+                    התקנה מהירה וקלה<br>
+                    מפוח חשמלי עוצמתי המנפח את פארק המים בפחות מ-2 דקות<br>
+                    נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
+                    מחיר: 600 ש"ח
                 </p>
             </div>
         </section>
@@ -328,47 +363,68 @@
     </a>
 
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = { smallInflatablesCarousel: 1, largeInflatablesCarousel: 1 };
+        showSlides(1, 'smallInflatablesCarousel');
+        showSlides(1, 'largeInflatablesCarousel');
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+        function plusSlides(n, carouselId) {
+            showSlides(slideIndex[carouselId] += n, carouselId);
         }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        function currentSlide(n, carouselId) {
+            showSlides(slideIndex[carouselId] = n, carouselId);
         }
 
-        function showSlides(n) {
+        function showSlides(n, carouselId) {
             let i;
-            let slides = document.querySelectorAll(".carousel img, .carousel iframe");
-            let dots = document.querySelectorAll(".dot");
-            let caption = document.querySelector(".carousel-caption h4");
-            let description = document.querySelector(".carousel-caption p");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            let carousel = document.getElementById(carouselId);
+            let slides = carousel.querySelectorAll("img, iframe");
+            let dots = carousel.nextElementSibling.querySelectorAll(".dot");
+            let caption = carousel.nextElementSibling.nextElementSibling.querySelector("h4");
+            let description = carousel.nextElementSibling.nextElementSibling.querySelector("p");
+            if (n > slides.length) { slideIndex[carouselId] = 1 }
+            if (n < 1) { slideIndex[carouselId] = slides.length }
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].classList.remove("active-dot");
             }
-            slides[slideIndex-1].classList.add("active");
-            dots[slideIndex-1].classList.add("active-dot");
-            caption.textContent = "פרטי המתנפח:";
-            description.innerHTML = `
-                מידות: אורך 365 ס"מ, רוחב 320 ס"מ, גובה 270 ס"מ<br>
-                משקל הפריט: 35 ק"ג<br>
-                מתאים לגילאים 5-10<br>
-                משקל מקסימלי למשתמש בודד: 45 ק"ג<br>
-                כמות ילדים מקסימלית: 5<br>
-                עשוי מחומר PVC מצופה פוליאסטר צבעוני ועמיד<br>
-                כולל מיכל מים המתמלא ומתרוקן אקראית להפתעה ולשמירה על מגלשה חלקה<br>
-                תותח מים<br>
-                התקנה מהירה וקלה<br>
-                מפוח חשמלי עוצמתי המנפח את פארק המים בפחות מ-2 דקות<br>
-                נבדק ואושר לשימוש על ידי מכון התקנים הישראלי
-            `;
+            slides[slideIndex[carouselId] - 1].classList.add("active");
+            dots[slideIndex[carouselId] - 1].classList.add("active-dot");
+            if (carouselId === 'smallInflatablesCarousel') {
+                caption.textContent = "פרטי המתנפח:";
+                description.innerHTML = `
+                    מידות: אורך 365 ס"מ, רוחב 320 ס"מ, גובה 270 ס"מ<br>
+                    משקל הפריט: 35 ק"ג<br>
+                    מתאים לגילאים 5-10<br>
+                    משקל מקסימלי למשתמש בודד: 45 ק"ג<br>
+                    כמות ילדים מקסימלית: 5<br>
+                    עשוי מחומר PVC מצופה פוליאסטר צבעוני ועמיד<br>
+                    כולל מיכל מים המתמלא ומתרוקן אקראית להפתעה ולשמירה על מגלשה חלקה<br>
+                    תותח מים<br>
+                    התקנה מהירה וקלה<br>
+                    מפוח חשמלי עוצמתי המנפח את פארק המים בפחות מ-2 דקות<br>
+                    נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
+                    מחיר: 450 ש"ח
+                `;
+            } else if (carouselId === 'largeInflatablesCarousel') {
+                caption.textContent = "פרטי המתנפח:";
+                description.innerHTML = `
+                    מידות: אורך 500 ס"מ, רוחב 400 ס"מ, גובה 300 ס"מ<br>
+                    משקל הפריט: 50 ק"ג<br>
+                    מתאים לגילאים 5-12<br>
+                    משקל מקסימלי למשתמש בודד: 60 ק"ג<br>
+                    כמות ילדים מקסימלית: 8<br>
+                    עשוי מחומר PVC מצופה פוליאסטר צבעוני ועמיד<br>
+                    כולל מיכל מים המתמלא ומתרוקן אקראית להפתעה ולשמירה על מגלשה חלקה<br>
+                    תותח מים<br>
+                    התקנה מהירה וקלה<br>
+                    מפוח חשמלי עוצמתי המנפח את פארק המים בפחות מ-2 דקות<br>
+                    נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
+                    מחיר: 600 ש"ח
+                `;
+            }
         }
     </script>
 </body>
