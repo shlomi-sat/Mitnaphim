@@ -129,11 +129,9 @@
         .floating-whatsapp {
             right: 20px;
         }
-        <!--
-        .floating-review {
+        .floating-paybox {
             right: 80px;
         }
-        -->
         footer {
             text-align: center;
             margin-top: 20px;
@@ -213,6 +211,19 @@
             width: 80%;
             margin: auto;
         }
+        .pay-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .pay-button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -280,6 +291,7 @@
                     נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
                     מחיר: 300 ש"ח
                 </p>
+                <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">שלם עם ביט</a>
             </div>
             <h3>מתנפח גדול:</h3>
             <div class="carousel" id="largeInflatablesCarousel">
@@ -314,6 +326,7 @@
                     נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
                     מחיר: 400 ש"ח
                 </p>
+                <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">שלם עם ביט</a>
             </div>
         </section>
         <section id="services" class="services">
@@ -356,15 +369,8 @@
     </footer>
 
     <a href="https://wa.me/972557213884?text=שלום%2C%20הגעתי%20אליכם%20דרך%20האתר.%20אשמח%20לשמוע%20פרטים%20נוספים." class="floating-icon floating-whatsapp" target="_blank">
-
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
-
-    <!--
-    <a href="https://g.page/r/CWQ2boX-b6ZxEAI/review" class="floating-icon floating-review" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/768px-Star_icon_stylized.svg.png" alt="Google Review" style="width: 50px; height: 50px;">
-    </a>
-     -->
 
     <script>
         let slideIndex = { smallInflatablesCarousel: 1, largeInflatablesCarousel: 1 };
