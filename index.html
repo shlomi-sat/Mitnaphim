@@ -213,16 +213,25 @@
         }
         .pay-button {
             display: inline-block;
-            background-color: #28a745;
+            background-color: #ff6f61;
             color: white;
-            padding: 10px 20px;
-            border-radius: 15px;
+            padding: 10px;
+            border-radius: 50%;
             text-decoration: none;
             font-size: 16px;
             margin-top: 20px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
         }
         .pay-button:hover {
-            background-color: #218838;
+            background-color: #e55b50;
+        }
+        .pay-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
     </style>
 </head>
@@ -291,7 +300,10 @@
                     נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
                     מחיר: 300 ש"ח
                 </p>
-                <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">שלם עם ביט</a>
+                <div class="pay-buttons">
+                    <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">Bit</a>
+                    <a href="https://payboxapp.page.link/znP8oVY8LNFpaQAb7" class="pay-button" target="_blank">PayBox</a>
+                </div>
             </div>
             <h3>מתנפח גדול:</h3>
             <div class="carousel" id="largeInflatablesCarousel">
@@ -326,7 +338,10 @@
                     נבדק ואושר לשימוש על ידי מכון התקנים הישראלי<br>
                     מחיר: 400 ש"ח
                 </p>
-                <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">שלם עם ביט</a>
+                <div class="pay-buttons">
+                    <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">Bit</a>
+                    <a href="https://payboxapp.page.link/znP8oVY8LNFpaQAb7" class="pay-button" target="_blank">PayBox</a>
+                </div>
             </div>
         </section>
         <section id="services" class="services">
