@@ -1,3 +1,6 @@
+כמובן, הנה העדכון:
+
+```html
 <!DOCTYPE html>
 <html lang="he">
 <head>
@@ -7,7 +10,6 @@
     <title>פאן מתנפחים לילדים</title>
     <link rel="icon" href="logo.webp" type="image/webp">
 
-       
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q52XLSGLZ0"></script>
     <script>
@@ -18,7 +20,6 @@
       gtag('config', 'G-Q52XLSGLZ0');
     </script>
 
-    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,7 +134,7 @@
         }
         .floating-icon {
             position: fixed;
-            bottom: 20px;
+            bottom: 70px; /* שינוי למיקום גבוה יותר */
             z-index: 100;
             width: 50px;
             height: 50px;
@@ -246,6 +247,33 @@
             justify-content: center;
             gap: 20px;
         }
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            animation: blink 1s infinite;
+            z-index: 999;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -272,7 +300,9 @@
         <section id="about" class="about">
             <h2>אודות פאן מתנפחים</h2>
             <p>
-                ברוכים הבאים לפאן מתנפחים, המקום המושלם להשכרת מתנפחים יבשים ורטובים לילדים! אנו מתמחים בהפיכת כל אירוע לחוויה בלתי נשכחת עם מתנפחים מרהיבים ואיכותיים. צוות המקצוענים שלנו ידאג שהכל יתנהל בצורה חלקה ובטוחה, כדי שתוכלו ליהנות בראש שקט.
+                ברוכים הבאים לפאן מתנפחים, המקום המושלם להשכרת מתנפחים יבשים ורטובים לילדים! אנו מתמחים בהפיכת כל אירוע לחוויה בלתי נשכחת עם מתנפחים מרהיבים ואיכותיים. צוות
+
+ המקצוענים שלנו ידאג שהכל יתנהל בצורה חלקה ובטוחה, כדי שתוכלו ליהנות בראש שקט.
             </p>
             <p>
                 עם למעלה מ-5 שנות ניסיון בתחום, אנו מציעים מגוון רחב של מתנפחים לכל סוגי האירועים – ימי הולדת, בר/בת מצווה, אירועים פרטיים, ועוד. כל מתנפח שלנו עובר בדיקות בטיחות קפדניות ומותאם לגיל הילדים המשתמשים בו.
@@ -317,6 +347,9 @@
                     <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">Bit</a>
                     <a href="https://payboxapp.page.link/znP8oVY8LNFpaQAb7" class="pay-button" target="_blank">PayBox</a>
                 </div>
+                <div class="contact-info">
+                    <p><a href="tel:0502638644">התקשרו עכשיו: 050-2638644</a></p>
+                </div>
             </div>
             <h3>מתנפח גדול:</h3>
             <div class="carousel" id="largeInflatablesCarousel">
@@ -355,9 +388,11 @@
                     <a href="https://www.bitpay.co.il/app/me/15C09928-83B8-752C-EDEB-1A78B023B526D340" class="pay-button" target="_blank">Bit</a>
                     <a href="https://payboxapp.page.link/znP8oVY8LNFpaQAb7" class="pay-button" target="_blank">PayBox</a>
                 </div>
+                <div class="contact-info">
+                    <p><a href="tel:0502638644">התקשרו עכשיו: 050-2638644</a></p>
+                </div>
             </div>
         </section>
-
    
         <section id="services" class="services">
             <h2>השירותים שלנו</h2>
@@ -381,7 +416,9 @@
         <section id="contactForm" class="contact">
             <h2>צור קשר</h2>
             <form action="https://docs.google.com/forms/d/e/1FAIpQLScZt6agqo2_4OSJsbCurrYFUDznxmaJdCBW3iVO5UVOiYmiQA/formResponse" method="post" target="_self">
-                <label for="name">שם (חובה):</label>
+                <
+
+label for="name">שם (חובה):</label>
                 <input type="text" id="name" name="entry.1200704287" required>
                 <label for="phone">טלפון (חובה):</label>
                 <input type="tel" id="phone" name="entry.68737920" required>
@@ -398,9 +435,13 @@
         <p>פאן מתנפחים - כל הזכויות שמורות 2024 &copy;</p>
     </footer>
 
-    <a href="https://wa.me/972557213884?text=שלום%2C%20הגעתי%20אליכם%20דרך%20האתר.%20אשמח%20לשמוע%20פרטים%20נוספים." class="floating-icon floating-whatsapp" target="_blank">
+    <a href="https://wa.me/972502638644?text=שלום%2C%20הגעתי%20אליכם%20דרך%20האתר.%20אשמח%20לשמוע%20פרטים%20נוספים." class="floating-icon floating-whatsapp" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+
+    <div class="floating-banner">
+        התקשרו עכשיו: <a href="tel:0502638644" style="color: white; text-decoration: underline;">050-2638644</a>
+    </div>
 
     <script>
         let slideIndex = { smallInflatablesCarousel: 1, largeInflatablesCarousel: 1 };
@@ -469,3 +510,4 @@
     </script>
 </body>
 </html>
+```
